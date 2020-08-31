@@ -13,7 +13,7 @@
 
 1. fork本仓库
 
-![图片](http://img.cdn.sugarat.top/mdImg/MTU5ODg1Mzk4Nzk3MA==598853987970)
+![图片](https://img.cdn.sugarat.top/mdImg/MTU5ODg1Mzk4Nzk3MA==598853987970)
 
 2. clone 到本地
 
@@ -54,19 +54,19 @@ git push                    # 之后提交
 
 此次步骤在github上操作
 
-![图片](http://img.cdn.sugarat.top/mdImg/MTU5ODg1NDgyNTIzNw==598854825237)
+![图片](https://img.cdn.sugarat.top/mdImg/MTU5ODg1NDgyNTIzNw==598854825237)
 
 选择目标分支，与待合并的分支
 
-![图片](http://img.cdn.sugarat.top/mdImg/MTU5ODg1NTAxMzQ2OA==598855013468)
+![图片](https://img.cdn.sugarat.top/mdImg/MTU5ODg1NTAxMzQ2OA==598855013468)
 
 然后点击`create pull request`
 
-![图片](http://img.cdn.sugarat.top/mdImg/MTU5ODg1NTIyNTY3Ng==598855225676)
+![图片](https://img.cdn.sugarat.top/mdImg/MTU5ODg1NTIyNTY3Ng==598855225676)
 
 确认创建PR
 
-![图片](http://img.cdn.sugarat.top/mdImg/MTU5ODg1NTMxOTU0NQ==598855319545)
+![图片](https://img.cdn.sugarat.top/mdImg/MTU5ODg1NTMxOTU0NQ==598855319545)
 
 完成
 
