@@ -32,4 +32,6 @@
 ...收集整理中
 
 ## 相关资料
-...陆续整理中
+### markdown
+* [在线编辑器](https://www.zybuluo.com/mdeditor)
+* [语法手册](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown)
