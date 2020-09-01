@@ -35,3 +35,11 @@
 ### markdown
 * [在线编辑器](https://www.zybuluo.com/mdeditor)
 * [语法手册](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown)
+
+## JavaScript
+* [网道JavaScript](https://wangdoc.com/javascript/index.html)
+* [ES6标准入门](https://wangdoc.com/es6/)
+* [Node JS](https://nodejs.org/zh-cn/)
+
+## 其它
+* [VS Code](https://code.visualstudio.com)
