@@ -1,7 +1,6 @@
 # 提交一次PR
 
 ## 任务
-
 1. 向本仓库提一个PR，按照首页中的[README](../README.md)格式
 
 ## 所需准备
@@ -16,46 +15,42 @@
 
 ![图片](https://img.cdn.sugarat.top/mdImg/MTU5ODg1Mzk4Nzk3MA==598853987970)
 
-2.clone 到本地
+2. clone 到本地
 
 ```sh
 git clone 你fork过后的仓库的地址
 ```
 
-3.创建+切换一个新分支
-
+3. 创建+切换一个新分支
 > 建议每天的任务单独一个分支
 
 分支规范 feature/日期/姓名拼音
-
 ```sh
 git checkout -b feature/20200831/xiaoming
 ```
 
-4.开始书写你的内容
+4. 开始书写你的内容
 
-5.提交到暂存区
+5. 提交到暂存区
 
 ```sh
 git add .        # 提交本地本地改动
 git add filename # 提交指定文件
 ```
 
-6.提交到本地仓库员
-
+6. 提交到本地仓库员
 ```sh
 git commit -m "feat: 本次提交的描述信息"
 ```
 
-7.提交到远程仓库
-
+7. 提交到远程仓库
 ```sh
 git push -u origin 分支名    # 新分支的首次提交
 
 git push                    # 之后提交
 ```
 
-8.提pr
+8. 提pr
 
 此次步骤在github上操作
 
@@ -76,5 +71,4 @@ git push                    # 之后提交
 完成
 
 ## 其它
-
 如还有疑问请小窗私我
