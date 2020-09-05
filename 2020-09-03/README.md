@@ -33,7 +33,9 @@ var sortArray = function(nums) {
 * [语法专题](https://wangdoc.com/javascript/features/index.html)
 * [标准库](https://wangdoc.com/javascript/stdlib/index.html)
 * [js类型转换规则](https://sugarat.top/bigWeb/js/typeConvert.html)
+* [正则常用关键字](https://sugarat.top/bigWeb/regexp)
 
+**标准库的内容较多，可细品，对于某些对象的API目前不用去死记，可以自己找demo练练或者知道它能完成哪些操作就行**
 ### 相关问题
 1. 下面输出结果是什么,并说明转换的过程
 ```js
@@ -52,6 +54,7 @@ if ([] == !true) console.log(12);
 if ([] == false) console.log(13);
 if ([] == 0) console.log(14);
 if (+0 == -0) console.log(15);
+if (NaN == false) console.log(16);
 ```
 
 2. 下面计算结果（包含结果的类型）是什么，并说明理由
@@ -87,4 +90,37 @@ if (a == 1 && a == 2) {
     console.log('yes')
 }
 ```
-6. 更多。。持续更新中
+6. 如何判断一个对象是数组
+7. 数组哪些方法会改变自己
+8. 将any（任意值）转换为布尔值的方法有哪些
+9. 写一个方法将传入的Date对象转换为 `yyyy-MM-dd hh:mm:ss`的格式
+```js
+/**
+ * 日期格式化
+ * @param {Date} date 
+ */
+function convertDate(date) {
+
+}
+```
+10. 写个匹配手机号,邮箱的正则
+```js
+const rMobile = // 1开头的11位数组
+const rMail = // 中间包含@和.的字符串,@与.不能相邻
+```
+11. 写一个提取url中params的函数
+```js
+/**
+ * 提取url中的参数
+ * @param {String} url 
+ */
+function getUrlParams(url){
+
+}
+
+console.log(getUrlParams('https://a.b.com/path#title')); // {}
+console.log(getUrlParams('https://a.b.com/path?id=2')); // {id:2}
+console.log(getUrlParams('https://a.b.com/path?id=2&name=abc')); // {id:'2',name='abc'}
+console.log(getUrlParams('https://a.b.com/path?')); // {}
+console.log(getUrlParams('https://a.b.com/path?id=2&name=abc&word=dsds')); // {id:'2',name='abc',word:'dsds'}
+```
