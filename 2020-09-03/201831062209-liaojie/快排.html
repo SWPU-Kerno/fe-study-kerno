@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input相关操作</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <input type="text" @keyup.enter="inputEnter($event)">
+
+    <p>排序后:{{message}}</p>
+</div>
+
+<script>
+
+    const app = new Vue({
+        el:'#app',
+        data:{
+            message:'',
+            arr:[],
+            array:[]
+        },
+        methods:{
+            inputEnter(e){
+                let arra = [7 ,3 , 8 ,  2 , 1 ,10]
+                let value = e.target.value;
+                this.arr = value.split(' ');
+
+                for(let item in this.arr){
+
+                    this.array.push(parseInt(this.arr[item]));
+
+                }
+
+                console.log(this.arr);
+                console.log(this.array);
+                console.log(arra);
+                this.quickSort(0,this.array.length-1);
+                this.message = this.array.toString();
+
+
+            },
+            /*这儿的参数只能给下标*/
+            quickSort(left , right){
+                if(left > right)
+                    return;
+                let a = this.array;
+                let temp = a[left] //基准数
+                let i = left;
+                let j = right;
+
+                while( i != j){
+                    /*先从右边开始找*/
+                    while(a[j] >= temp && i < j){
+                        j--;
+                    }
+                    while (a[i] <= temp && i < j){
+                        i++;
+                    }
+                    if(i < j){
+                        let t = a[i];
+                        a[i] = a[j];
+                        a[j] = t;
+                    }
+                }
+
+                //    将基数归位
+                a[left] = a[i];
+                a[i] = temp;
+                this.array = a;
+                console.log(this.array);
+                this.quickSort(left,i -1);
+                this.quickSort(i+1,right);
+
+            }
+        },
+
+    })
+</script>
+</body>
+</html>
