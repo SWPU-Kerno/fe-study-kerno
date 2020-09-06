@@ -356,9 +356,13 @@ function convertDate(date) {
 ```javascript
 const rMobile = // 1开头的11位数字
 
-rMobile.match(/1\d{10}/)
-```
+rMobile.match(/^1\d{10}$/)
+
 const rMail = // 中间包含@和.的字符串,@与.不能相邻
+
+rMail.match(/.+@.+\..+/)
+```
+
 ### 11. 写一个提取url中params的函数
 <pre>
 /**
