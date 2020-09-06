@@ -1,5 +1,5 @@
-```js
 ### 第一种方法
+```js
 var getKthFromEnd = function(head, k) {
     let arr = []
 	// 把链表中的结点保存在数组里面
@@ -15,7 +15,9 @@ var getKthFromEnd = function(head, k) {
 	// 将倒数k个返回
     return arr[0]
 };
+```
 ### 第二种方法
+```js
 function reverseLink(head) {
     let pre = null
     let cur = head
