@@ -360,7 +360,7 @@ rMobile.match(/^1\d{10}$/)
 
 const rMail = // 中间包含@和.的字符串,@与.不能相邻
 
-rMail.match(/.+@.+\..+/)
+rMail.match(/^\w+@\w+\.\w+$/)
 ```
 
 ### 11. 写一个提取url中params的函数
