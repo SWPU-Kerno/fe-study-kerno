@@ -356,8 +356,8 @@ console.log(getUrlParams('https://a.b.com/path?id=2')); // {id:2}
 console.log(getUrlParams('https://a.b.com/path?id=2&name=abc')); // {id:'2',name='abc'}
 console.log(getUrlParams('https://a.b.com/path?')); // {}
 console.log(getUrlParams('https://a.b.com/path?id=2&name=abc&word=dsds')); // {id:'2',name='abc',word:'dsds'}
-</pre>
-```javascript
+
+
 function getUrlParams(url){
     let reg = /&?\??(\w+?=\w+)&?/g
     let params = {}
@@ -369,5 +369,8 @@ function getUrlParams(url){
     }
     return params
 }
-```
+</pre>
+
+
+
 
