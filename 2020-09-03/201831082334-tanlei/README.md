@@ -126,7 +126,9 @@ var sortArray = function(nums) {
 
 ### 哪些排序算法是稳定的?哪些是不稳定的?如何区分的?
 <pre>
-    答：归并排序是稳定的，快速排序是不稳定的。稳定的算法在排序的过程中不会改变元素彼此的位置的相对次序,反之不稳定的排序算法经常会改变这个次序
+    答：稳定的排序算法：冒泡排序、插入排序、归并排序、基数排序、桶排序
+    不稳定的排序算法：选择排序、希尔排序、快速排序、堆排序
+    稳定的算法在排序的过程中不会改变元素彼此的位置的相对次序,反之不稳定的排序算法经常会改变这个次序
 </pre>
 ## ES5
 <pre>
@@ -151,7 +153,16 @@ if ({}) console.log(2);
 </pre>
 if ([] == false) console.log(3);
 <pre>
-输出3，[]被转换成'', 再被转换成false
+输出3
+判断两者类型是否为 string 和 number, 如果是, 将字符串转换成 number
+判断其中一方是否为 boolean, 如果是, 将 boolean 转为 number 再进行判断
+判断其中一方是否为 object 且另一方为 string、number 或者 symbol , 如果是, 将 object 转为原始类型再进行判断
+
+其中一方是布尔，false被转换为0
+这时，其中一方是对象，另一方是number，[]被转换为原始类型值''
+然后，一方是字符串，另一方是数值，''被转换为0
+0 == 0 为真
+
 </pre>
 if ({} == false) console.log(4);
 <pre>
@@ -159,11 +170,12 @@ if ({} == false) console.log(4);
 </pre>
 if ([] == ![]) console.log(5);
 <pre>
-输出5，[]被转化为布尔值时为true，因此![]为false。参与运算的时候被转换成false，所以左边右边相等
+输出5，在进行 == 运算之前，== 两边的表达式的值需要先算出来
+[] == ![] , 相当于是 [] == false
 </pre>
 if ({} == !{}) console.log(6);
 <pre>
-输出6，{}始终被转换成true
+不输出，{}始终被转换成true
 </pre>
 if ('' == false) console.log(7);
 <pre>
@@ -330,18 +342,20 @@ a = {
     方法二：!!any
 </pre>
 ### 9. 写一个方法将传入的Date对象转换为 yyyy-MM-dd hh:mm:ss的格式
+```javascript
 /**
  * 日期格式化
  * @param {Date} date 
  */
+
 function convertDate(date) {
-<code>
     return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-</code>
 }
+```
 ### 10. 写个匹配手机号,邮箱的正则
-const rMobile = // 1开头的11位数字
 ```javascript
+const rMobile = // 1开头的11位数字
+
 rMobile.match(/1\d{10}/)
 ```
 const rMail = // 中间包含@和.的字符串,@与.不能相邻
