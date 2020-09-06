@@ -1,4 +1,4 @@
-# 算法与数据结构/JS
+# 算法与数据结构/计网
 
 ## 链表中倒数第k个节点
 leetcode题链：[剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
@@ -23,3 +23,16 @@ var getKthFromEnd = function (head, k) {
 
 };
 ```
+
+## 复习前面的内容
+### 相关问题
+1. 什么是IIFE？如何使用？
+2. 什么是闭包?闭包有什么优点
+3. 什么是提升(变量提升/函数提升)？提升规则是什么,
+4. delete命令的作用是什么？其局限性是什么
+5. 如何获取函数预期传入的参数个数
+6. eval命令的作用是什么
+7. 遍历数组有哪些方式
+8. forin遍历数组有什么缺点
+9. 逗号(",")运算符的作用是什么
+10. 将字符串转为数字的方法有哪些

@@ -34,8 +34,10 @@
   * ES5基础：语法，标准库
 * 2020-09-05
   * 算法与数据结构：大数相加
+  * ES5基础：面向对象
 * 2020-09-06
   * 算法与数据结构：链表中倒数第k个节点
+  * ES5：复习前面的知识
 </details>
 
 ## 问题答案整理
@@ -77,7 +79,15 @@
 ### JavaScript
 * [网道JavaScript](https://wangdoc.com/javascript/index.html)
 * [ES6标准入门](https://wangdoc.com/es6/)
+* [简单易懂-原型与原型链的关系](https://juejin.im/pin/6844910475042357261)
+* [原型与原型链](https://sugarat.top/bigWeb/js/prototype.html)
+* [js类型转换规则](https://sugarat.top/bigWeb/js/typeConvert.html)
+* [正则常用关键字](https://sugarat.top/bigWeb/regexp)
 * [Node JS](https://nodejs.org/zh-cn/)
+
+## 计算机网络
+* [掘金：用 4.5 万字，谈一谈网络协议的微缩宇宙](https://juejin.im/post/6854573219509338119)
+* [掘金：前端备战21秋招之计算机网络，我觉得这一篇应该就够了](https://juejin.im/post/6846687590268010509)
 
 ### 其它
 * [VS Code](https://code.visualstudio.com)
