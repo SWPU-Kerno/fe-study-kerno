@@ -346,11 +346,18 @@ rMobile.match(/1\d{10}/)
 ```
 const rMail = // 中间包含@和.的字符串,@与.不能相邻
 ### 11. 写一个提取url中params的函数
+<code>
 /**
  * 提取url中的参数
  * @param {String} url 
  */
-
+console.log(getUrlParams('https://a.b.com/path#title')); // {}
+console.log(getUrlParams('https://a.b.com/path?id=2')); // {id:2}
+console.log(getUrlParams('https://a.b.com/path?id=2&name=abc')); // {id:'2',name='abc'}
+console.log(getUrlParams('https://a.b.com/path?')); // {}
+console.log(getUrlParams('https://a.b.com/path?id=2&name=abc&word=dsds')); // {id:'2',name='abc',word:'dsds'}
+</code>
+```javascript
 function getUrlParams(url){
     let reg = /&?\??(\w+?=\w+)&?/g
     let params = {}
@@ -362,8 +369,5 @@ function getUrlParams(url){
     }
     return params
 }
-console.log(getUrlParams('https://a.b.com/path#title')); // {}
-console.log(getUrlParams('https://a.b.com/path?id=2')); // {id:2}
-console.log(getUrlParams('https://a.b.com/path?id=2&name=abc')); // {id:'2',name='abc'}
-console.log(getUrlParams('https://a.b.com/path?')); // {}
-console.log(getUrlParams('https://a.b.com/path?id=2&name=abc&word=dsds')); // {id:'2',name='abc',word:'dsds'}
+```
+
