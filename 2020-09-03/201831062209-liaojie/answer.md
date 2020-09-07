@@ -34,7 +34,7 @@ if (NaN == false) console.log(16); 不输出，NaN不等于任何东西
 
 ##  2.计算下面结果（包含结果的类型）是什么，并说明理由
 
-{ } +1  输出结果是 string类型的 [object object]1, {}先调用valueOf返回对象本身，再调用toString方法转为字符串
+{ } +1  输出结果是 +1,{}处于运算符的前面被识别为代码块儿{}+1等同于+1
  
 1 + {}  输出结果是 string类型的 1[object object],同上的
 
@@ -68,7 +68,7 @@ if (NaN == false) console.log(16); 不输出，NaN不等于任何东西
 
 false - true 输出结果是 Number类型的-1
 
-{ } -[] 输出结果是 NaN 因为{}被Number()转换为NaN 但是[]被Number转换为0
+{ } -[] 输出结果是 -0 ,这里的{}处于运算符前面被当做代码块儿看待，所以{}-[]相当于-[]等于-0
 
 [] - {} 输出结果是NaN 同上
 
@@ -136,6 +136,9 @@ Boolean()函数
 双重的否运算符: !!
 
 ## 9.写一个方法将传入的Data对象转换为yyyy-MM-dd hh:mm:ss的格式
+
+见js文件
+
 /**
 
  * 日期格式化
