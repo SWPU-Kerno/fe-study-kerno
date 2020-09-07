@@ -2,15 +2,15 @@
 答：数值（number）、字符串（string）、布尔值（Boolean）
 
 2. 为什么 0.1 + 0.2 !== 0.3
-答： JavaScript 会自动把64位浮点数，转成32位整数，然后再进行运算。所以这里是两个32位数合成
-一个32位数和64位数比较。所以肯定false
+答： javascript中的数字都是用浮点数表示的，在0.1+0.2这个式子中，0.1和0.2都是近似表示，两个近似
+值相加最后得到的值是0.30000000000000004,所以最后不等于0.3
 
 3. 判断数据类型的方法有哪几种
-答：typeof、instanceof、Object.prototype.toString
+答：typeof、instanceof、Object.prototype.toString、constructor。
 
 4.null是对象吗，为什么typeof null === 'object'
-答：null的类型是object也就是对象，后来null独立出来作为单独的数据类型。
-为了兼容以前的代码，typeof null返回object就没法改变了
+答：null是一个表示“空”的对象，当转为数值时为0。后来null独立出来，但为了兼容以前的代码，所以
+typeof null 还是等于 object。
 
 5. == 与 === 有什么区别
 答：==是相等运算符，===是严格运算符。==是比较两个值是否相等，===是比较是否为同一个值，
