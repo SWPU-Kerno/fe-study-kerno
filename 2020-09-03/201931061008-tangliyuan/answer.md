@@ -220,21 +220,13 @@ false - []
 
 #### 3.如何判断一个变量是否为对象,有哪几种方案
 
-第一种，用typeof进行判断。
-
-第二种，用obj instanceof Object 来判断。instanceof运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性，意思就是该变量通过原型链上能否找到构造函数的prototype 属性 。
+第一种，用obj instanceof Object 来判断。instanceof运算符用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性，意思就是该变量通过原型链上能否找到构造函数的prototype 属性 。
 
 ```
 obj instanceof Object
 ```
 
-第三种，用constructor来判断，
-
-```
-obj.constructor === Object
-```
-
-第四种，用 Object.prototype.toString.call()方法可以精准判断变量类型，它返回[object constructorName]的字符串格式 。
+第二种，用 Object.prototype.toString.call()方法可以精准判断变量类型，它返回[object constructorName]的字符串格式 。
 
 ```
 Object.prototype.toString.call(obj)
@@ -297,7 +289,70 @@ a = {
  * @param {Date} date 
  */
 function convertDate(date) {
+            var y = date.getFullYear();
+            var M = date.getMonth() + 1;
+            var d = date.getDate();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            if(M < 10){
+                M = '0'+ M;
+            }
+            if(d < 10){
+                d = '0' + d;
+            }
+            if(h < 10){
+                h = '0' + h;
+            }
+            if(m < 10){
+                m = '0' + m;
+            }
+            if(s < 10){
+                s = '0' + s;
+            }
+            return y + '-' + M +'-'+d+' '+h +':'+m+':'+s;
+}
+```
+
+#### 10.写个匹配手机号，邮箱的正则
+
+```
+const rMobile = /1\d{10}/; // 1开头的11位数字
+
+const rMail = /^\w+@\w+\.\w+$/; // 中间包含@和.的字符串,@与.不能相邻
+```
+
+#### 11.写一个提取url中params的函数
+
+```
+/**
+ * 提取url中的参数
+ * @param {String} url 
+ */
+function getUrlParams(url){
 
 }
+
+console.log(getUrlParams('https://a.b.com/path#title')); // {}
+console.log(getUrlParams('https://a.b.com/path?id=2')); // {id:2}
+console.log(getUrlParams('https://a.b.com/path?id=2&name=abc')); // {id:'2',name='abc'}
+console.log(getUrlParams('https://a.b.com/path?')); // {}
+console.log(getUrlParams('https://a.b.com/path?id=2&name=abc&word=dsds')); // {id:'2',name='abc',word:'dsds'}
+```
+
+```
+function getUrlParams(url){
+            //先把url中？后面的分隔出来，参数就在？后面
+            var reg = url.split('?');
+            var temp = reg[1];
+
+            var s = temp.split('&'); //再把每个参数组分隔成数组
+            var params = {};         //最后返回的是字典
+            for(var i in s){
+                var m = s[i].split('='); //把每个参数从=分隔
+                params[m[0]] = m[1];     //把分隔出来的参数分别放在键值上
+            }
+            return params;
+        }
 ```
 
