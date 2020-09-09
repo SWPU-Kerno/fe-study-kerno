@@ -58,15 +58,19 @@
 // console.log(Number([]));
 // console.log(Number({ }));
 
-let a = {
-    i:1,
-    valueOf:()=>{
-        return a.i++;
-    }
-}
-// a.join = a.shift;
-// console.log(Number(a));
+// let a = {
+//     i:1,
+//     valueOf:()=>{
+//         return a.i++;
+//     }
+// }
+// // a.join = a.shift;
+// // console.log(Number(a));
+//
+// if(a == 1 && a == 2){
+//     console.log("yes");
+// }
 
-if(a == 1 && a == 2){
-    console.log("yes");
-}
+console.log({} + 1);
+
+console.log({} - []);

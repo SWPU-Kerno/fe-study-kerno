@@ -8,30 +8,30 @@ function quickSort(arr,left, right) {
     if(left > right){
         return;
     }
-    let a = arr;//将传进来的数组赋值给arr
-    let temp = a[left];
+    // let a = arr;//将传进来的数组赋值给arr
+    let temp = arr[left];
     let i = left;
     let j = right;
 
     while(i != j ){
 
-        while( a[j] >= temp && i < j){
+        while( arr[j] >= temp && i < j){
             j--;
         }
-        while( a[i] <= temp && i < j){
+        while( arr[i] <= temp && i < j){
             i++;
         }
         if(i < j){
-            let t = a[i];
-            a[i] = a[j];
-            a[j] = t;
+            let t = arr[i];
+            arr[i] = arr[j];
+            arr[j] = t;
         }
     }
 
-    a[left] = a[i];
-    a[i] = temp;
+    arr[left] = arr[i];
+    arr[i] = temp;
 
-    arr = a;//重新对原数组进行赋值
+    // arr = a;//重新对原数组进行赋值
 
     quickSort(arr,left,i-1);
     quickSort(arr,i+1,right);
