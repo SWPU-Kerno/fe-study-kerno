@@ -86,3 +86,43 @@ function merge(nums, left, mid, right) {
 
 ### 问题回答
 
+1. 下面输出结果是什么,并说明转换的过程  
+该问题主要是js中数据类型强制转换的问题    
+if ([]) console.log(1); **输出:1**   
+if ({}) console.log(2); **输出:2**  
+if ([] == false) console.log(3); **输出:3** []和false都转换为数字类型0然后== 返回为true  
+if ({} == false) console.log(4); **输出:无** {}转换为NaN false为0 最终返回false  
+if ([] == ![]) console.log(5); **输出:5** [] == ! []   ->   [] == false  ->  [] == 0  ->   '' == 0   ->  0 == 0   ->  true  
+if ({} == !{}) console.log(6); **输出:无** {} == ! {}   ->   {} == false  ->  {} == 0  ->   NaN == 0    ->  false  
+if ('' == false) console.log(7); **输出:7** 都转换为0后返回true  
+if (false == 0) console.log(8); **输出:8** false转换为0之后返回true  
+if (1 == true) console.log(9); **输出:9** true转换为1之后返回true  
+if ('' == 0) console.log(10); **输出:10** ''->0 最终返回true  
+if (NaN == NaN) console.log(11); **输出:无** NaN不等于任何其他类型  
+if ([] == !true) console.log(12); **输出:12** []->0 !true->false->0 最终返回12  
+if ([] == false) console.log(13); **输出:13** []->0 0==false 返回true  
+if ([] == 0) console.log(14); **输出:14** []->0 0==0返回true  
+if (+0 == -0) console.log(15); **输出:15** +0和-0相等返回true  
+if (NaN == false) console.log(16); **输出:无** NaN不等于任何其他类型  
+2. 下面计算结果（包含结果的类型）是什么，并说明理由  
+{ } +1
+1 + {}
+[] + 1
+1 + []
+[1, 2, 3] + 0
+[1, 2, 3] + '0'
+1 + '0'
+1 + 0
+1 + true
+1 + false
+'1' + true
+'1' + false
+![] + []
+
+1 - true
+'0' - 0
+0 - '1'
+false - true
+{ } -[]
+[] - {}
+false - []
