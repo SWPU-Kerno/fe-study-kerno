@@ -1,4 +1,4 @@
-# 算法与数据结构/计网
+# 算法与数据结构/JS
 
 ## 链表中倒数第k个节点
 leetcode题链：[剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
