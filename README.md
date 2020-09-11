@@ -52,6 +52,9 @@
 
 * 2020-09-01 
   * [单链表转置](https://sugarat.top/coding/algorithm/linkReserve.html)
+* 2020-09-03
+  * [快速排序](https://sugarat.top/coding/algorithm/quickSort.html)
+  * [归并排序](https://sugarat.top/coding/algorithm/mergeSort.html)
 </details>
 
 <details>
@@ -66,6 +69,28 @@
   * [null是对象吗，为什么typeof null === 'object'](https://sugarat.top/interview/js/nullobj.html)
   * [== 与 === 有什么区别](https://sugarat.top/interview/js/equal.html)
   * [什么是类数组,如何将类数组转换为数组](https://sugarat.top/bigWeb/js/likearray.html)
+* 2020-09-03
+  * [数据类型转换习题](https://sugarat.top/bigWeb/js/typeConvert.html#%E8%87%AA%E6%B5%8B)
+  * [判断一个变量是对对象的方案](https://sugarat.top/interview/js/judgeObj.html#_1-instanceof)
+  * [判断变量是数组的方案](https://sugarat.top/interview/js/judgeArr.html)
+  * [Object.keys()与Object.getOwnPropertyNames()有什么区别](https://sugarat.top/coding/js/deepClone.html#_4-%E6%8B%B7%E8%B4%9Dsymbol)
+  * [下面如何定义`a`才能打印`yes`](https://sugarat.top/coding/js/equalA.html#%E5%AE%9A%E4%B9%89-toprimitive)
+  ```js
+  if (a == 1 && a == 2) {
+    console.log('yes')
+  }
+  ```
+  * [数组哪些方法会改变自己](https://sugarat.top/interview/js/changeArr.html)
+  * 将any（任意值）转换为布尔值的方法有哪些
+  ```js
+  // 1 Boolean
+  Boolean('') // false
+  // 2 取反两次
+  !!''  // false
+  ```
+  * 下满问题看看[2020-09-03](./2020-09-03/README.md)其它同学的杰作
+  * 写个匹配手机号,邮箱的正则
+  * 写一个提取url中params的函数
 </details>
 
 ## 更多问题
