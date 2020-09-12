@@ -6,7 +6,8 @@
 * [博客园-算法笔记（一）——简述时间、空间复杂度分析](https://www.cnblogs.com/somedayLi/p/9728495.html)
 * [掘金-时间复杂度和空间复杂度](https://juejin.im/post/6844904082583322632)
 * [算法的时间复杂度和空间复杂度-总结](https://www.bukun.top/2020/04/20/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/)
-* ![图片](https://img.cdn.sugarat.top/mdImg/MTU5OTg3Nzk3MzcxMQ==599877973711)
+
+![图片](https://img.cdn.sugarat.top/mdImg/MTU5OTg3Nzk3MzcxMQ==599877973711)
 
 
 ### 1. 最大交换
@@ -27,7 +28,7 @@
 解释: 不需要交换
 ```
 
-你的解答：
+**你的解答**
 ```js
 /**
  * @param {number} num
@@ -40,7 +41,7 @@ var maximumSwap = function(num) {
 
 ### 2. 最大数
 >给定一组非负整数，重新排列它们的顺序使之组成一个最大的整数
-* leetcode题链：[179. 最大数](https://leetcode-cn.com/problems/maximum-swap/)
+* leetcode题链：[179. 最大数](https://leetcode-cn.com/problems/largest-number/)
 
 例1:
 ```
@@ -51,6 +52,17 @@ var maximumSwap = function(num) {
 ```
 输入: [3,30,34,5,9]
 输出: 9534330
+```
+
+**你的解答**
+```js
+/**
+ * @param {number[]} nums
+ * @return {string}
+ */
+var largestNumber = function(nums) {
+
+};
 ```
 
 ### 3. 整理一篇笔记/文章

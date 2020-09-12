@@ -24,6 +24,17 @@
 ]
 ```
 
+**你的解答**
+```js
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var permute = function(nums) {
+
+};
+```
+
 ### 2. 字符串的排列
 >输入一个字符串，打印出该字符串中字符的所有排列,你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
 * leetcode题链：[剑指 Offer 38. 字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/)
@@ -34,6 +45,16 @@
 输出：["abc","acb","bac","bca","cab","cba"]
 ```
 
+**你的解答**
+```js
+/**
+ * @param {string} s
+ * @return {string[]}
+ */
+var permutation = function(s) {
+
+};
+```
 ### 3.温习
 1. 温习一下自己前面写的笔记
 2. 09-01--09-12 的题目温习一下（大概率是有一些遗忘了）
