@@ -139,7 +139,7 @@ var smallestK = function(arr, k) {
 ### 2.二叉树的层序遍历
 > leetcode题链：102. 二叉树的层序遍历
 
-#### 迭代的方式
+#### 迭代的方式——额外增加层级属性
 ```js
 var levelOrder = function(root) {
     // 层序遍历使用的队列
@@ -176,6 +176,50 @@ var levelOrder = function(root) {
         }
     }
 
+    return result
+};
+```
+#### 迭代的方式——使用分割符
+```js
+var levelOrder = function(root) {
+    // 层序遍历使用的队列
+    let queue = []
+    // 保存最终结果
+    let result = []
+    // 保存每层的结果
+    let level = []
+
+    let cur = root
+    
+    if (cur) {
+        // 推入队列作为开始
+        queue.push(cur)
+        // 推入分割符
+        queue.push(0)
+        while (queue.length) {
+            // 推出开始处理
+            cur = queue.shift()
+            if (cur === 0) {
+                // 如果推出分割符后队列为空，说明已经处理完毕，不需要再推入分割符
+                if (queue.length)
+                {
+                    queue.push(0)
+                }
+                if (level.length) {
+                    result.push(level)
+                }
+                level = []
+                continue
+            }
+            if (cur.left) {
+                queue.push(cur.left)
+            }
+            if (cur.right) {
+                queue.push(cur.right)
+            }
+            level.push(cur.val)
+        }
+    }
     return result
 };
 ```
@@ -220,6 +264,7 @@ var levelOrder = function(root) {
 </pre>
 ### 2. 单线程模型的优缺点有哪些
 <pre>
+答：
 优点：代码逻辑简单，不用考虑线程同步互斥问题
 缺点：所有代码都在一个线程，容易造成堵塞
 </pre>
@@ -279,6 +324,7 @@ setInterval是立马执行回调函数，然后在每隔一段时间后继续执
 </pre>
 ### 10. 宏任务有哪些，微任务有哪些
 <pre>
+答：
 微任务:
     promise
     MutationObserver
