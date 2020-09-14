@@ -55,6 +55,8 @@
 * 2020-09-03
   * [快速排序](https://sugarat.top/coding/algorithm/quickSort.html)
   * [归并排序](https://sugarat.top/coding/algorithm/mergeSort.html)
+* 2020-09-05
+  * [大数相加](https://sugarat.top/coding/algorithm/addString.html)
 </details>
 
 <details>
@@ -88,13 +90,31 @@
   // 2 取反两次
   !!''  // false
   ```
-  * 下满问题看看[2020-09-03](./2020-09-03/README.md)其它同学的杰作
+  * 下面问题看看[2020-09-03](./2020-09-03/README.md)其它同学的杰作
   * 写个匹配手机号,邮箱的正则
   * 写一个提取url中params的函数
+* 2020-09-05
+  * [模拟实现new命令](https://sugarat.top/coding/js/myNew.html)
+  * [模拟实现call](https://sugarat.top/coding/js/myCall.html)
+  * [模拟实现apply](https://sugarat.top/coding/js/myApply.html)
+  * [模拟实现bind](https://sugarat.top/coding/js/myBind.html)
+  * 更改this的指向有哪些方案
+    * new/bind/call/apply
+  * [bind,call,apply区别是什么](https://sugarat.top/bigWeb/js/apply.html)
+  * [原型/原型链](https://sugarat.top/bigWeb/js/prototype.html)
+  * [instanceof判断变量类型的原理是什么](https://sugarat.top/interview/js/instanceof.html)
+  * [继承实现](https://sugarat.top/coding/js/inherit.html)
 </details>
 
-## 更多问题
-...收集整理中
+## 推荐阅读
+放一些大佬的博客/文章
+
+**具备一定基础后，差不多品完09-01--09-10中的内容**
+<center> <font>
+
+## [冴羽的博客](https://github.com/mqyqingfeng/Blog)
+
+</font></center>
 
 ## 相关资料
 ### 程序员基本功
@@ -119,6 +139,7 @@
 ### JavaScript
 * [网道JavaScript](https://wangdoc.com/javascript/index.html)
 * [ES6标准入门](https://wangdoc.com/es6/)
+* [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 * [简单易懂-原型与原型链的关系](https://juejin.im/pin/6844910475042357261)
 * [原型与原型链](https://sugarat.top/bigWeb/js/prototype.html)
 * [js类型转换规则](https://sugarat.top/bigWeb/js/typeConvert.html)
@@ -136,3 +157,5 @@
 
 ### 其它
 * [VS Code](https://code.visualstudio.com)
+* [正则测试 - regex101](https://regex101.com/)
+* [正则可视化 - Regexper](https://regexper.com/)
