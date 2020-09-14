@@ -110,11 +110,7 @@
 放一些大佬的博客/文章
 
 **具备一定基础后，差不多品完09-01--09-10中的内容**
-<center> <font>
-
-## [冴羽的博客](https://github.com/mqyqingfeng/Blog)
-
-</font></center>
+1. [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 
 ## 相关资料
 ### 程序员基本功
