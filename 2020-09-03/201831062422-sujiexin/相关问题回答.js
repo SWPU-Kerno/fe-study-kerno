@@ -93,16 +93,17 @@ const rMail = /\w+@\w+\.\w+/ // 中间包含@和.的字符串,@与.不能相邻
  * @param {String} url 
  */
 function getUrlParams(url){
-    var reg = /^https:\/\/\D+\.\D+\/path/;
-    var str = url.replace(reg,'');
-    if(str[0]=="?"){
-        str = str.substr(1);
-        str = str.split("&");
+    var obj = new Object();
+    var strArr = url.split("?");
+    if(strArr.length==1||strArr[1]==""){
+        return obj;
     }
-    else{
-        str =  "";
+    strArr = strArr[1].split("&");
+    for (let index = 0; index < strArr.length; index++) {
+        var tempArr = strArr[index].split("=");
+        obj[tempArr[0]] = tempArr[1];
     }
-    return str; 
+    return obj;
 }
 
 console.log(getUrlParams('https://a.b.com/path#title')); // {}
