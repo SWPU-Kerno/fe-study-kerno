@@ -2,14 +2,14 @@
 
 ### 1.模拟实现new命令
 
-```
+```js
 function myNew(fn, ...parameters) {
             var result = {};                           //先初始化一个空对象，作为将要返回的对象实例
+            Object.setPrototypeOf(result, fn.prototype); //不符合就把这个对象指向构造函数的prototype属性
             var r = fn.call(result, ...parameters);    //执行构造函数内部代码
             if (typeof r === 'object' && r !== null){  //符合返回的对象
                 return r;
             }
-            Object.setPrototypeOf(result, fn.prototype); //不符合就把这个对象指向构造函数的prototype属性
             return result;
         }
 
@@ -58,7 +58,7 @@ console.log(myNew(fn3,'xm'))
 
 ### 4.模拟实现一下bind,call,apply,
 
-```
+```js
 Function.prototype.myCall = function (obj, ...params) {
             //如果是null，默认为window
             obj = obj || window
@@ -117,3 +117,30 @@ Function.prototype.myCall = function (obj, ...params) {
 
 ### 5.什么是原型
 
+在js创建的时候，自动关联另一个对象，这个对象就是原型，而且每个对象都会从原型中“继承”属性。
+
+ 函数的prototype 属性指向了一个对象，这个对象正是调用该构造函数而创建的实例的**原型** 
+
+原型也是一个对象,可以通过`new Object()`的方式创建
+
+
+
+### 6.什么是原型链
+
+js中所有的对象都有自己的原型对象，原型对象也是对象，所以有自己的原型。因此，会形成一个原型链，对象到原型，原型到原型……最终所有的对象都可以上溯到`Object.prototype`,这个的原型就是null，原型链的尽头是null。
+
+
+
+### 7.instanceof判断变量类型的原理是什么
+
+ `instanceof`的原理是检查右边构造函数的`prototype`属性，是否在左边对象的原型链上。有一种特殊情况，就是左边对象的原型链上，只有`null`对象。这时，`instanceof`判断会失真。 
+
+
+
+### 8.如何实现对象（构造函数）的继承
+
+构造函数的继承：
+
+1.在子类的构造函数中调用父类的构造函数（call）
+
+2.让子类的原型指向父类的原型，这样子子类就可以继承父类原型。（create）
