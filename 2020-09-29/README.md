@@ -1,8 +1,7 @@
 # 算法与数据结构/ES6/拓展深广度
 
-## 算法与数据结构
-### 学习资料
-### 题目
+## 1. 算法与数据结构
+leetcode题链：[剑指 Offer 55 - I. 二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/)
 
 ## 2. ES6 
 ### 学习资料
