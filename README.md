@@ -41,6 +41,18 @@
 * 2020-09-10
   * 算法与数据结构：堆排序，二叉树层序遍历
   * ES5：异步操作，event loop，作用域，执行上下文...
+* 2020-09-12
+  * 算法与数据结构：最大交换，最大数，时间/空间复杂度
+* 2020-09-13
+  * 算法与数据结构：全排列实现方法,字符串全排列，数组的全排列
+* 2020-09-18
+  * 算法与数据结构：对称二叉树
+  * ES6：简介，扩展运算符，let/const/var
+  * 深广度拓展：js的GC机制
+* 2020-09-21
+  * 算法与数据结构：单词统计
+  * ES6：字符串的扩展
+  * 深广度：图片格式，chrome DevTools
 </details>
 
 ## 问题答案整理
@@ -55,6 +67,8 @@
 * 2020-09-03
   * [快速排序](https://sugarat.top/coding/algorithm/quickSort.html)
   * [归并排序](https://sugarat.top/coding/algorithm/mergeSort.html)
+* 2020-09-05
+  * [大数相加](https://sugarat.top/coding/algorithm/addString.html)
 </details>
 
 <details>
@@ -88,13 +102,27 @@
   // 2 取反两次
   !!''  // false
   ```
-  * 下满问题看看[2020-09-03](./2020-09-03/README.md)其它同学的杰作
+  * 下面问题看看[2020-09-03](./2020-09-03/README.md)其它同学的杰作
   * 写个匹配手机号,邮箱的正则
   * 写一个提取url中params的函数
+* 2020-09-05
+  * [模拟实现new命令](https://sugarat.top/coding/js/myNew.html)
+  * [模拟实现call](https://sugarat.top/coding/js/myCall.html)
+  * [模拟实现apply](https://sugarat.top/coding/js/myApply.html)
+  * [模拟实现bind](https://sugarat.top/coding/js/myBind.html)
+  * 更改this的指向有哪些方案
+    * new/bind/call/apply
+  * [bind,call,apply区别是什么](https://sugarat.top/bigWeb/js/apply.html)
+  * [原型/原型链](https://sugarat.top/bigWeb/js/prototype.html)
+  * [instanceof判断变量类型的原理是什么](https://sugarat.top/interview/js/instanceof.html)
+  * [继承实现](https://sugarat.top/coding/js/inherit.html)
 </details>
 
-## 更多问题
-...收集整理中
+## 推荐阅读
+放一些大佬的博客/文章
+
+**具备一定基础后，差不多品完09-01--09-10中的内容**
+1. [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 
 ## 相关资料
 ### 程序员基本功
@@ -119,6 +147,7 @@
 ### JavaScript
 * [网道JavaScript](https://wangdoc.com/javascript/index.html)
 * [ES6标准入门](https://wangdoc.com/es6/)
+* [冴羽的博客](https://github.com/mqyqingfeng/Blog)
 * [简单易懂-原型与原型链的关系](https://juejin.im/pin/6844910475042357261)
 * [原型与原型链](https://sugarat.top/bigWeb/js/prototype.html)
 * [js类型转换规则](https://sugarat.top/bigWeb/js/typeConvert.html)
@@ -136,3 +165,5 @@
 
 ### 其它
 * [VS Code](https://code.visualstudio.com)
+* [正则测试 - regex101](https://regex101.com/)
+* [正则可视化 - Regexper](https://regexper.com/)
