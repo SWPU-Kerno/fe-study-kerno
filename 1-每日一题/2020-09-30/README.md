@@ -1,4 +1,4 @@
-# 斐波拉切数列
+# 斐波拉契数列
 
 斐波那契数列示例： 
 
@@ -7,11 +7,11 @@
 **请分别给出迭代和递归的实现方式**
 
 ## 问题1
-实现这样一个函数，得到斐波拉切数列指定位置上的值
+实现这样一个函数，得到斐波拉契数列指定位置上的值
 
 ```js
 /**
- * 求斐波拉切数列第n项
+ * 求斐波拉契数列第n项
  * @param {number} index 
  * @returns {number}
  */
@@ -29,7 +29,7 @@ fib(4) // 3
 
 ```js
 /**
- * 求指定斐波拉切数对应的位置
+ * 求指定斐波拉契数对应的位置
  * @param {number} num 
  * @returns {number}
  */
@@ -47,7 +47,7 @@ getFibIndex(4) // -1
 **递归**
 ```js
 /**
- * 求斐波拉切数列第n项
+ * 求斐波拉契数列第n项
  * @param {number} index 
  * @returns {number}
  */
@@ -62,7 +62,7 @@ function fib(index) {
 **迭代**
 ```js
 /**
- * 求斐波拉切数列第n项
+ * 求斐波拉契数列第n项
  * @param {number} index 
  * @returns {number}
  */
@@ -85,7 +85,7 @@ function fib(index) {
 **迭代**
 ```js
 /**
- * 求指定斐波拉切数对应的位置
+ * 求指定斐波拉契数对应的位置
  * @param {number} num 
  * @returns {number}
  */
@@ -113,7 +113,7 @@ function getFibIndex(num) {
 类似迭代的处理思路，将计算过程作为参数传入
 ```js
 /**
- * 求指定斐波拉切数对应的位置
+ * 求指定斐波拉契数对应的位置
  * @param {number} num 
  * @returns {number}
  */
