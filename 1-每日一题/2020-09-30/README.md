@@ -42,4 +42,91 @@ getFibIndex(4) // -1
 ```
 
 ## 题解
-TODO:wait a day
+### 问题1
+
+**递归**
+```js
+/**
+ * 求斐波拉切数列第n项
+ * @param {number} index 
+ * @returns {number}
+ */
+function fib(index) {
+    if (index === 1 || index === 2) {
+        return 1
+    }
+    return fib(index - 1) + fib(index - 2)
+};
+```
+
+**迭代**
+```js
+/**
+ * 求斐波拉切数列第n项
+ * @param {number} index 
+ * @returns {number}
+ */
+function fib(index) {
+    let a = 1, b = 1, c = 0
+    if (index === 1 || index === 2) {
+        return 1
+    }
+    while (index-- > 2) {
+        c = a + b
+        a = b
+        b = c
+    }
+    return c
+};
+```
+
+### 问题2
+
+**迭代**
+```js
+/**
+ * 求指定斐波拉切数对应的位置
+ * @param {number} num 
+ * @returns {number}
+ */
+function getFibIndex(num) {
+    if (num === 1) {
+        return 1
+    }
+    let a = 1, b = 1, c = 0
+    let index = 2
+    while (c < num) {
+        index++
+        c = a + b
+        a = b
+        b = c
+        if (c === num) {
+            return index
+        }
+    }
+    return -1
+}
+```
+
+**递归**
+
+类似迭代的处理思路，将计算过程作为参数传入
+```js
+/**
+ * 求指定斐波拉切数对应的位置
+ * @param {number} num 
+ * @returns {number}
+ */
+function getFibIndex(num, a = 1, b = 1, index = 2) {
+    if (num === 1) {
+        return 1
+    }
+    if (a + b > num) {
+        return -1
+    }
+    if (a + b === num) {
+        return ++index
+    }
+    return getFibIndex(num, b, a + b, ++index)
+}
+```
