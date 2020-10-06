@@ -81,7 +81,14 @@ class Solution:
 </pre>
 #### 3. 常用的浏览器内核有哪几种
 <pre>
-
+答：
+IE: Trident
+Firefox: Gecko
+Safari: Webkit
+Chrome: Chromium/Blink(Blink属于webkit分支)
+Opera: Blink
+Android: 主要是Webkit
+IOS: 一般是Webkit或者Trident
 </pre>
 #### 4. let/const/var声明的变量有什么区别
 <pre>
