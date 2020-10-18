@@ -14,4 +14,11 @@ console.log(func()); // -> 3
 ```
 
 ## 题解
-TODO:wait a day
+```js
+const func = (function () {
+    let count = 0
+    return () => {
+        return ++count
+    }
+})();
+```
