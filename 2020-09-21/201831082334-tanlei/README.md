@@ -48,7 +48,7 @@ function solve(article, n) {
 ### 时间空间复杂度分析
 <pre>
 设数据规模为给定单词的个数n
-时间复杂度分析：两个for 循环的次数都为n ，并且是同级循环，因此时间复杂度为O(n)
+时间复杂度分析：两个for 循环的次数都为n，属于同级循环，仍然是n。对于sort，V8 引擎 sort 函数只给出了两种排序 InsertionSort 和 QuickSort，数量小于10的数组使用 InsertionSort，比10大的数组则使用 QuickSort。假如这里n比较大，使用QuickSort，并且单词分布比较稀疏（每种只出现1次），有n个排序项，排序的时间复杂度为O(nlogn)，因此最终的时间复杂度为O(nlogn)
 空间复杂度分析：分析使用了words、 result、resultArr, 长度最大为n。因此空间复杂度为O(n)
 </pre>
 ### 2. ES6
@@ -91,9 +91,8 @@ templateStr('abcd${name}dsds${age}',b) // abcdxmdsds18
 // 解：
 function templateStr(str,obj){
     let reg =  /\${\s*(.+?)\s*}/g
-    // 将obj通过默认参数的方式传入，因为前四个参数都会被覆盖，所以要在e获取
-    return str.replace(reg, (a, b, c, d, e=obj)=>e[b]===undefined?a:e[b])
-    // 0.0 还有没得其他在回调函数中使用外部变量的方法呢
+    // 噢噢
+    return str.replace(reg, (a, b)=>obj[b]===undefined?a:obj[b])
 }
 ```
 
