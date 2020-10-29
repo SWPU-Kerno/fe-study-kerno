@@ -47,5 +47,3 @@ console.log(isSameWeek(new Date('2019-09-02'), new Date('2019-09-09')));  // fal
 console.log(isSameWeek(new Date('2019-09-02'), new Date('2019-09-10')));  // false  
 console.log(isSameWeek(new Date('2019-09-03'), new Date('2019-09-10')));  // false  
 ```
-<comment/>
-<tongji/>
